@@ -9,7 +9,7 @@
 Summary:	Library for dealing with screen parameters
 Name:		sonic-screen-library
 Version:	6.6.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	LGPL
 Group:		System/Libraries
 Url:		https://github.com/Sonic-DE/sonic-screen-library
@@ -90,6 +90,7 @@ Development files for %{name}.
 Summary:	Tool for examining SonicDE Screen
 Group:		Development/SonicDE and Qt
 Requires:	%{libname} = %{EVRD}
+Conflicts:  kscreen-doctor
 
 
 %description -n sonic-screen-doctor
