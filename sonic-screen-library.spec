@@ -8,15 +8,15 @@
 
 Summary:	Library for dealing with screen parameters
 Name:		sonic-screen-library
-Version:	6.6.3
-Release:	%{?git:0.%{git}.}2
+Version:	6.6.4
+Release:	%{?git:0.%{git}.}1
 License:	LGPL
 Group:		System/Libraries
 Url:		https://github.com/Sonic-DE/sonic-screen-library
 # %if 0%{?git:1}
 # Source0:	https://invent.kde.org/plasma/libkscreen/-/archive/%{gitbranch}/libkscreen-%{gitbranchd}.tar.bz2#/libkscreen-%{git}.tar.bz2
 # %else
-Source0:	%url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
+Source0:	%url/archive/%version/%name-%version.tar.gz
 # %endif
 
 BuildRequires:	cmake(ECM)
