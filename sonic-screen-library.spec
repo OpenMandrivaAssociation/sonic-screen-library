@@ -60,6 +60,10 @@ Conflicts:  %{_lib}KF6Screen
 %description
 Library for dealing with screen parameters.
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+rm -rf %{buildroot}/%{_libdir}/pkgconfig
+
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/libkscreen.categories
 %dir %{_qtdir}/plugins/kf6/kscreen
@@ -81,10 +85,13 @@ Development files for %{name}.
 %files -n %{devname}
 %{_includedir}/KF6/KScreen
 %{_includedir}/KF6/kscreen_version.h
-%{_libdir}/cmake/KF6Screen
+
+# pending rename
+# %{_libdir}/cmake/KF6Screen
+# %{_libdir}/pkgconfig/*.pc
+
 %{_libdir}/libKF6Screen.so
 %{_libdir}/libKF6ScreenDpms.so
-%{_libdir}/pkgconfig/*.pc
 
 %package -n sonic-screen-doctor
 Summary:	Tool for examining SonicDE Screen
