@@ -9,7 +9,7 @@
 Summary:	Library for dealing with screen parameters
 Name:		sonic-screen-library
 Version:	6.7.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	LGPL
 Group:		System/Libraries
 Url:		https://github.com/Sonic-DE/sonic-screen-library
