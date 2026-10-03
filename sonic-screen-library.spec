@@ -9,7 +9,7 @@
 Summary:	Library for dealing with screen parameters
 Name:		sonic-screen-library
 Version:	6.7.3
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 License:	LGPL
 Group:		System/Libraries
 Url:		https://github.com/Sonic-DE/sonic-screen-library
@@ -60,10 +60,6 @@ Conflicts:  %{_lib}KF6Screen
 %description
 Library for dealing with screen parameters.
 
-%install -a
-rm -rf %{buildroot}/%{_libdir}/cmake
-rm -rf %{buildroot}/%{_libdir}/pkgconfig
-
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/libkscreen.categories
 %dir %{_qtdir}/plugins/kf6/kscreen
@@ -85,10 +81,8 @@ Development files for %{name}.
 %files -n %{devname}
 %{_includedir}/KF6/KScreen
 %{_includedir}/KF6/kscreen_version.h
-
-# pending rename
-# %{_libdir}/cmake/KF6Screen
-# %{_libdir}/pkgconfig/*.pc
+%{_libdir}/cmake/KF6Screen
+%{_libdir}/pkgconfig/*.pc
 
 %{_libdir}/libKF6Screen.so
 %{_libdir}/libKF6ScreenDpms.so
